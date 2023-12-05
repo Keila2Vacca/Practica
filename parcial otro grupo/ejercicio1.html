@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="numero1" placeholder="Introduce un número" autofocus>
+  <input type="text" id="numero2" placeholder="Introduce otro número">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcular() {
+      var num1 = document.getElementById("numero1").value;
+      var num2 = document.getElementById("numero2").value;
+
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, ingresa solo números");
+        return;
+      }
+
+      if (num1.trim() === "" || num2.trim() === "") {
+        alert("Por favor, completa todos los campos");
+        return;
+      }
+
+      var resultado = "";
+      var inicio = parseInt(num1);
+      var fin = parseInt(num2);
+
+      for (var i = inicio; i <= fin; i += 2) {
+        resultado += i + "-";
+      }
+
+      resultado = resultado.slice(0, -1);
+
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+</body>
+</html>
