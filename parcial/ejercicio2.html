@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: first baseline;
+      justify-content: end;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="numero" placeholder="Introduce un número" autofocus>
+  <button ondblclick="buildPyramid()">Calcular valores consecutivos</button>
+  <p id="pyramid"></p>
+  <script>
+    function buildPyramid() {
+      var num = document.getElementById("numero").value;
+      if (isNaN(num)) {
+        alert("Por favor, ingresa solo números");
+        setTimeout(function () {
+          document.getElementById("numero").value = "";
+        }, 3000);
+      } else {
+        var piramide = "";
+        for (var i = 1; i <= num; i++) {
+          for (var j = 1; j <= i; j++) {
+            piramide += i + " ";
+          }
+          piramide += "\n";
+        }
+        document.getElementById("pyramid").innerText = piramide;
+      }
+    }
+    
+  </script>
+</body>
+
+</html>

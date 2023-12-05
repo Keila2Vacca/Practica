@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="cajaTexto" placeholder="Introduce un texto" autofocus onblur="salir()">
+    <button ondblclick="elim1()">Eliminar 1ª caracter</button>
+    <button ondblclick="elimul()">Eliminar último caracter</button>
+    <p id="resultado"></p>
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+    <script>
+        function salir() {
+            var texto = document.getElementById("cajaTexto").value;
+            texto = texto.split("");
+            document.getElementById("resultado").innerHTML = texto;
+            document.getElementById("cajaTexto").disabled = true;
+        }
+
+        function elim1() {
+            var palabra = document.getElementById("cajaTexto").value;
+            var palabras = palabra.split(",");
+            var nuevaPalabra = palabras.map(function (pal) {
+                return pal.slice(1);
+            });
+            document.getElementById("resultado1").innerHTML = nuevaPalabra.join(",");
+        };
+        function elimul() {
+            var palabra = document.getElementById("cajaTexto").value;
+            var palabras = palabra.split(",");
+            var nuevaPalabra = palabras.map(function (pal) {
+                return pal.slice(0, -1);
+            });
+            document.getElementById("resultado2").innerHTML = nuevaPalabra.join(","); 
+        };
+    </script>
+</body>
+
+</html>
