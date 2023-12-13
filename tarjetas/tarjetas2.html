@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas tipo poster</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Poppins:wght@100&family=Sofia+Sans+Extra+Condensed:wght@1&display=swap');
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: rgb(162, 47, 47);
+            background: linear-gradient(90deg, rgba(162, 47, 47, 1) 1%, rgba(0, 212, 255, 1) 65%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            gap: 30px;
+        }
+
+        .card_portrait {
+            height: 500px;
+            width: 350px;
+            background-color: rgb(252, 220, 220);
+            border-radius: 10px;
+            box-shadow: 0 0 5px 1px #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .card_portrait:hover {
+            transform: scale(1.05);
+            transition: all 0.8s ease-in-out;
+            background-color: rgb(255, 170, 170);
+        }
+
+        .card_portrait img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid gray;
+        }
+
+        span{
+            text-align: center;
+        }
+
+        .social_media img {
+            width: 40px;
+            height: 40px;
+            border: none;
+            margin: 0 5px;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .social_media img:hover{
+            filter: grayscale(0.7);
+            border: 2px double gray;
+        }
+        .card_portrait img::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/index.html">Volver atrás</a>
+    <div class="container">
+        <div class="card_portrait">
+            <img src="/img/profile-icon.jpg" alt="Foto">
+            <h2>Keila Vacca</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet tenetur praesentium laborum
+                ipsum odio corporis autem labore aspernatur est!</span>
+            <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank">knvaccab@ufpso.edu.co</a>
+            <div class="social_media">
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+            </div>
+        </div>    
+        <div class="card_portrait">
+            <img src="/img/profile-icon.jpg" alt="Foto">
+            <h2>Keila Vacca</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet tenetur praesentium laborum
+                ipsum odio corporis autem labore aspernatur est!</span>
+            <a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank">knvaccab@ufpso.edu.co</a>
+            <div class="social_media">
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+                <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank">
+                    <img src="/img/facebook.png" alt="Icon facebook">
+                </a>
+            </div>
+        </div>      
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
